@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1490173458 source:c:\users\joald_000\desktop\programming\ipp\drzewo\list.c
+	"list.h"
+
+1490126458 c:\users\joald_000\desktop\programming\ipp\drzewo\list.h
+	"tree.h"
+
+1490199802 c:\users\joald_000\desktop\programming\ipp\drzewo\tree.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+
+1490200233 source:c:\users\joald_000\desktop\programming\ipp\drzewo\main.c
+	"list.h"
+
+1490173221 source:c:\users\joald_000\desktop\programming\ipp\drzewo\tree.c
+	"tree.h"
+
