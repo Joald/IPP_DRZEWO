@@ -18,7 +18,7 @@ List newList(bool ifDiagnostic) {
 }
 
 void freeList(List toDelete) {
-    for (int i = 0; i < toDelete->lastAdded; ++i) {
+    for (int i = 0; i <= toDelete->lastAdded; ++i) {
         if (toDelete->nodeRandomAccess[i] != NULL) {
             freeNode(toDelete->nodeRandomAccess[i]);
         }

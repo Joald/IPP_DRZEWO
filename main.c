@@ -2,17 +2,6 @@
 
 typedef char *String;
 
-static String readString() {
-    String toReadInto = malloc(15);
-
-    if (scanf("%15s", toReadInto) != EOF) {
-        return toReadInto;
-    }
-    else {
-        return "";
-    }
-}
-
 static int readInt() {
     int toReadInto;
     scanf("%d", &toReadInto);
@@ -20,20 +9,12 @@ static int readInt() {
 }
 
 static void processTasks(List mainList) {
-    String commandInput;
+    String commandInput = malloc(sizeof(char)*20);
 
     while (true) {
-        commandInput = readString();
-
-        if (!strcmp(commandInput, "")) {
-            return;
+        if (scanf("%15s", commandInput) == EOF) {
+            break;
         }
-
-        ///debug debug debug debug debug debug debug debug debug
-        if(mainList->lastAdded > 11){break;}
-
-        ///debug debug debug debug debug debug debug debug debug
-
 
         int parameter = readInt();
 
@@ -44,9 +25,6 @@ static void processTasks(List mainList) {
             deleteNode(parameter, mainList);
         }
         else if (!strcmp(commandInput, "DELETE_SUBTREE")) {
-
-            //Tree a = mainList->nodeRandomAccess[parameter];
-            //printf("%d %d %d %d %d ", a->label, a->firstChild->label, a->firstChild->next->label,a->firstChild->next->next->label,a->firstChild->next->next->next->label);
             deleteSubtree(parameter, mainList);
         }
         else if (!strcmp(commandInput, "SPLIT_NODE")) {
@@ -66,6 +44,7 @@ static void processTasks(List mainList) {
         }
 
     }
+    free(commandInput);
 
 }
 
