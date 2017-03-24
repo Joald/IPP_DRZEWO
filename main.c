@@ -29,6 +29,12 @@ static void processTasks(List mainList) {
             return;
         }
 
+        ///debug debug debug debug debug debug debug debug debug
+        if(mainList->lastAdded > 11){break;}
+
+        ///debug debug debug debug debug debug debug debug debug
+
+
         int parameter = readInt();
 
         if (!strcmp(commandInput, "ADD_NODE")) {
