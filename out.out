@@ -1,0 +1,30 @@
+==6325== Memcheck, a memory error detector
+==6325== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==6325== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==6325== Command: test -v
+==6325==
+==6325== Invalid read of size 8
+==6325==    at 0x4EB6D84: ??? (in /lib64/libc-2.24.so)
+==6325==    by 0x4E5FF5D: ??? (in /lib64/libc-2.24.so)
+==6325==    by 0x4E5EF90: ??? (in /lib64/libc-2.24.so)
+==6325==    by 0x4E5E783: setlocale (in /lib64/libc-2.24.so)
+==6325==    by 0x401713: ??? (in /usr/bin/test)
+==6325==    by 0x4E5534F: (below main) (in /lib64/libc-2.24.so)
+==6325==  Address 0x51d7048 is 3 bytes after a block of size 5 alloc'd
+==6325==    at 0x4C29D1F: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6325==    by 0x4E65D89: ??? (in /lib64/libc-2.24.so)
+==6325==    by 0x4E5FF47: ??? (in /lib64/libc-2.24.so)
+==6325==    by 0x4E5EF90: ??? (in /lib64/libc-2.24.so)
+==6325==    by 0x4E5E783: setlocale (in /lib64/libc-2.24.so)
+==6325==    by 0x401713: ??? (in /usr/bin/test)
+==6325==    by 0x4E5534F: (below main) (in /lib64/libc-2.24.so)
+==6325==
+==6325==
+==6325== HEAP SUMMARY:
+==6325==     in use at exit: 0 bytes in 0 blocks
+==6325==   total heap usage: 30 allocs, 30 frees, 3,681 bytes allocated
+==6325==
+==6325== All heap blocks were freed -- no leaks are possible
+==6325==
+==6325== For counts of detected and suppressed errors, rerun with: -v
+==6325== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
