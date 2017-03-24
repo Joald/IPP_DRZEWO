@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 {
     bool ifDiagnostic = argc > 1;
 
-    if (ifDiagnostic && !strcmp(argv[1], "-v")) {
+    if (ifDiagnostic && strcmp(argv[1], "-v")) {
         printf("ERROR\n");
         return 1;
     }
