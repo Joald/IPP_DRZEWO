@@ -1,12 +1,6 @@
 #include "list.h"
 
 typedef char *String;
-/*
-static String readString() {
-    String toReadInto = malloc(18);
-
-    
-}*/
 
 static int readInt() {
     int toReadInto;
@@ -17,17 +11,7 @@ static int readInt() {
 static void processTasks(List mainList) {
     String commandInput = malloc(sizeof(char)*20);
 
-    while (true) {
-        if (scanf("%15s", commandInput) == EOF) {
-            break;
-        }
-
-        ///debug debug debug debug debug debug debug debug debug
-        //if(mainList->lastAdded > 11){break;}
-
-        ///debug debug debug debug debug debug debug debug debug
-
-
+    while (scanf("%15s", commandInput) != EOF) {
         int parameter = readInt();
 
         if (!strcmp(commandInput, "ADD_NODE")) {
@@ -37,9 +21,6 @@ static void processTasks(List mainList) {
             deleteNode(parameter, mainList);
         }
         else if (!strcmp(commandInput, "DELETE_SUBTREE")) {
-
-            //Tree a = mainList->nodeRandomAccess[parameter];
-            //printf("%d %d %d %d %d ", a->label, a->firstChild->label, a->firstChild->next->label,a->firstChild->next->next->label,a->firstChild->next->next->next->label);
             deleteSubtree(parameter, mainList);
         }
         else if (!strcmp(commandInput, "SPLIT_NODE")) {
@@ -55,7 +36,8 @@ static void processTasks(List mainList) {
         }
 
         if (mainList->diagnostic) {
-            printf("NODES: %d\n", mainList->lastAdded);
+			int numberOfNodes = mainList->lastAdded - mainList->deleted;
+            fprintf(stderr, "NODES: %d\n", numberOfNodes);
         }
 
     }
