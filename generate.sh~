@@ -1,2 +1,0 @@
-echo "ADD_NODE 0";
-for i in {0..325000}; do echo "SPLIT_NODE 0 1";done
