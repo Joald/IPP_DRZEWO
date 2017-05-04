@@ -1,2 +1,2 @@
 # IPP_DRZEWO
-projekt drzewo ipp plz no steal
+Program zaliczeniowy na zadanie "Drzewo" na Indywidualnym Projekcie Programistycznym, MIM UW 2017
